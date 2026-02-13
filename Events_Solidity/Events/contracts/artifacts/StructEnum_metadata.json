@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_consumer",
+						"type": "address"
+					}
+				],
+				"name": "OrderCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_zipCode",
+						"type": "string"
+					}
+				],
+				"name": "ZipChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "AdvanceOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_zipCode",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_products",
+						"type": "uint256[]"
+					}
+				],
+				"name": "CreateOrder",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "GetOrder",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "customer",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "ZipCode",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "products",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "enum StructEnum.Status",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct StructEnum.Order",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_zip",
+						"type": "string"
+					}
+				],
+				"name": "UpdateZip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "ZipCode",
+						"type": "string"
+					},
+					{
+						"internalType": "enum StructEnum.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "txCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Events.sol": "StructEnum"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Events.sol": {
+			"keccak256": "0x67a13d7a9cf2eeba2c007dcf696e142de04fa2beb1a01382945527d8f3c12a3a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f8359ebef0d05f7a30e2805cedef807765f9ae2d45f760fcee321ffefa0cdcd9",
+				"dweb:/ipfs/QmbgNQB8stWVUNfBqBhqWizZi4yP2NAMxurKwpK64keJJm"
+			]
+		}
+	},
+	"version": 1
+}
